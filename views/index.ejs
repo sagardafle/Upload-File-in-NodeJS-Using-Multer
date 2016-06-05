@@ -1,0 +1,55 @@
+<!-- views/login.ejs -->
+<!doctype html>
+<html>
+<head>
+    <title>Node Authentication</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> <!-- load bootstrap css -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"> <!-- load fontawesome -->
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.js"></script>
+    <script src= "/js/register.js"></script>
+
+
+    <style>
+        body        { padding-top:80px; }
+    </style>
+</head>
+<body ng-app="app">
+<h1 style="font-family: fantasy; margin-left: inherit;"> Travel Buddy</h1>
+<br>
+<div class="col-md-6">
+    <div ng-controller="regCtrl">
+
+        <form class="form-horizontal" name="userForm" ng-submit="registration()" enctype ="multipart/form-data" action="/upload" method = "post">
+            <fieldset>
+
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="profileimage">Profile image</label>
+                    <div class="col-md-4">
+                        <!--<form id ="uploadForm" enctype ="multipart/form-data" action="/upload" method = "post">-->
+                            <input type="file" name="upload_file" />
+                            
+                        <!--</form>-->
+                    </div>
+                </div>
+
+                <!-- Button -->
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="submit"></label>
+                    <div class="col-md-4">
+                        <button id="submit" name="submit" class="btn btn-primary">SUBMIT</button>
+                    </div>
+                </div>
+
+            </fieldset>
+        </form>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
